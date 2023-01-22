@@ -1,0 +1,19 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "createcogwars:zersium_crystal"
+    }
+  ],
+  "results": [
+    {
+      "item": "createcogwars:zersium_dust",
+      "count": 3
+    },
+    {
+      "item": "createcogwars:zersium_dust",
+      "chance": 0.5
+    }
+  ],
+  "processingTime": 150
+}

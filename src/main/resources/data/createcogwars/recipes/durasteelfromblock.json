@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "createcogwars:durasteel_block"
+    }
+  ],
+  "result": {
+    "item": "createcogwars:durasteel_ingot",
+    "count": 9
+  }
+}

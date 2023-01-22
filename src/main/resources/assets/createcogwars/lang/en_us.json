@@ -1,0 +1,18 @@
+{
+  "item.createcogwars.zersium_crystal": "Zersium Crystal",
+  "item.createcogwars.zersium_dust": "Zersium Dust",
+  "item.createcogwars.durasteel_ingot": "Durasteel Ingot",
+  "item.createcogwars.durasteel_compound": "Durasteel Compound",
+  "item.createcogwars.ceramisteel_compound": "Ceramisteel Compound",
+  "item.createcogwars.incomplete_ceramisteel_compound": "Incomplete Ceramisteel Compound",
+  "item.createcogwars.durasteel_sheet": "Durasteel Sheet",
+  "block.createcogwars.durasteel_block": "Durasteel Block",
+  "block.createcogwars.durasteel_plating": "Durasteel Plating",
+  "block.createcogwars.durasteel_casing": "Durasteel Casing",
+  "block.createcogwars.zersium_block": "Zersium Block",
+  "block.createcogwars.zersium_crystal_block": "Zersium Crystal Block",
+  "block.createcogwars.ceramisteel_bricks": "Ceramisteel Bricks",
+  "itemGroup.starcogs": "Create: Star Cogs"
+
+
+}

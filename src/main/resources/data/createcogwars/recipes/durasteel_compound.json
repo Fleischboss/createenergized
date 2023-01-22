@@ -1,0 +1,23 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "fluid": "minecraft:lava",
+      "nbt": {},
+      "amount": 250
+    },
+    {
+      "item": "minecraft:iron_ingot",
+      "nbt": {}
+    },
+    {
+      "item": "createcogwars:zersium_dust",
+      "nbt": {}
+    }
+  ],
+  "results": [
+    {
+      "item": "createcogwars:durasteel_compound"
+    }
+  ]
+}

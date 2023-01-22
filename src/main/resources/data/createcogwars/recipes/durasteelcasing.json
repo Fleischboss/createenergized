@@ -1,0 +1,16 @@
+{
+  "type": "create:item_application",
+  "ingredients": [
+    {
+      "tag": "forge:stripped_logs"
+    },
+    {
+      "item": "createcogwars:durasteel_ingot"
+    }
+  ],
+  "results": [
+    {
+      "item": "createcogwars:durasteel_casing"
+    }
+  ]
+}

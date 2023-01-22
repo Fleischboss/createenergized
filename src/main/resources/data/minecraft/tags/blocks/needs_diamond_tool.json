@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "createcogwars:durasteel_casing",
+    "createcogwars:durasteel_block",
+    "createcogwars:durasteel_plating",
+    "createcogwars:zersium_crystal_block"
+    "createcogwars:ceramisteel_bricks"
+  ]
+}

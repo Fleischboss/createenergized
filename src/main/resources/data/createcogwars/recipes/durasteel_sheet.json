@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "createcogwars:durasteel_ingot"
+    }
+  ],
+  "results": [
+    {
+      "item": "createcogwars:durasteel_sheet"
+    }
+  ]
+}
