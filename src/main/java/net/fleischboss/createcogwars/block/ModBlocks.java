@@ -1,7 +1,6 @@
 package net.fleischboss.createcogwars.block;
 
-import com.tterrag.registrate.Registrate;
-import com.tterrag.registrate.util.entry.BlockEntry;
+
 import net.fleischboss.createcogwars.createcogwars;
 import com.simibubi.create.content.contraptions.base.CasingBlock;
 import net.fleischboss.createcogwars.item.ModCreativeModeTab;
@@ -297,7 +296,7 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, createcogwars.MOD_ID);
 
-//Basic stuff
+
     public static final RegistryObject<Block> DURASTEEL_BLOCK = registerBlock("durasteel_block",
             ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
@@ -318,7 +317,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CERAMISTEEL_BRICKS = registerBlock("ceramisteel_bricks",
             ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(4f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
-//Lasers
+
 public static final RegistryObject<Block> LASER_CONTROLLER = registerBlock("laser_controller",
         ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                 .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
@@ -327,7 +326,7 @@ public static final RegistryObject<Block> LASER_CONTROLLER = registerBlock("lase
             ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
 
-    public static final RegistryObject<Block> LASER_COOLANT_INPUT = registerBlock("laser_coolant_Input",
+    public static final RegistryObject<Block> LASER_COOLANT_INPUT = registerBlock("laser_coolant_input",
             ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
 
