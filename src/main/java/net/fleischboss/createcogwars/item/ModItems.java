@@ -13,6 +13,9 @@ public class ModItems {
     public static final RegistryObject<Item> ZERSIUM_CRYSTAL = ITEMS.register("zersium_crystal",
         () -> new Item(new Item.Properties().tab(ModCreativeModeTab.STARCOGS)));
 
+    public static final RegistryObject<Item> ZERSIUM_SEED = ITEMS.register("zersium_seed",
+            () -> new Item(new Item.Properties().tab(ModCreativeModeTab.STARCOGS)));
+
     public static final RegistryObject<Item> ZERSIUM_DUST = ITEMS.register("zersium_dust",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.STARCOGS)));
 

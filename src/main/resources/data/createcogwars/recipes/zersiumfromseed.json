@@ -1,0 +1,19 @@
+{
+  "type": "create:mixing",
+  "ingredients": [
+    {
+      "item": "createcogwars:zersium_seed"
+    },
+    {
+      "fluidTag": "minecraft:water",
+      "amount": 250
+    }
+  ],
+  "results": [
+    {
+      "item": "createcogwars:zersium_crystal"
+    }
+  ],
+  "heatRequirement": "heated",
+  "processingTime": 400
+}
