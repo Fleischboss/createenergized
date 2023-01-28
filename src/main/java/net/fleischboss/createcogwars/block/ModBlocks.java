@@ -313,11 +313,72 @@ public class ModBlocks {
             ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
 
-
     public static final RegistryObject<Block> CERAMISTEEL_BRICKS = registerBlock("ceramisteel_bricks",
             ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(4f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
+    //dyed plating
+    public static final RegistryObject<Block> BLACK_DURASTEEL_PLATING = registerBlock("black_durasteel_plating",
+            ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
 
+    public static final RegistryObject<Block> DARK_GRAY_DURASTEEL_PLATING = registerBlock("dark_grey_durasteel_plating",
+            ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
+
+    public static final RegistryObject<Block> GREY_DURASTEEL_PLATING = registerBlock("grey_durasteel_plating",
+            ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
+
+    public static final RegistryObject<Block> WHITE_DURASTEEL_PLATING = registerBlock("white_durasteel_plating",
+            ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
+
+    public static final RegistryObject<Block> PINK_DURASTEEL_PLATING = registerBlock("pink_durasteel_plating",
+            ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
+
+    public static final RegistryObject<Block> PURPLE_DURASTEEL_PLATING = registerBlock("purple_durasteel_plating",
+            ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
+
+    public static final RegistryObject<Block> BLUE_DURASTEEL_PLATING = registerBlock("blue_durasteel_plating",
+            ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
+
+    public static final RegistryObject<Block> LIME_DURASTEEL_PLATING = registerBlock("lime_durasteel_plating",
+            ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
+
+    public static final RegistryObject<Block> GREEN_DURASTEEL_PLATING = registerBlock("green_durasteel_plating",
+            ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
+
+    public static final RegistryObject<Block> DARK_GREEN_DURASTEEL_PLATING = registerBlock("dark_green_durasteel_plating",
+            ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
+
+    public static final RegistryObject<Block> YELLOW_DURASTEEL_PLATING = registerBlock("yellow_durasteel_plating",
+            ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
+
+    public static final RegistryObject<Block> RED_DURASTEEL_PLATING = registerBlock("red_durasteel_plating",
+            ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
+
+    public static final RegistryObject<Block> MAGENTA_DURASTEEL_PLATING = registerBlock("magenta_durasteel_plating",
+            ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
+
+    public static final RegistryObject<Block> BROWN_DURASTEEL_PLATING = registerBlock("brown_durasteel_plating",
+            ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
+
+    public static final RegistryObject<Block> CYAN_DURASTEEL_PLATING = registerBlock("cyan_durasteel_plating",
+            ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                    .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
+
+
+    //laser
 public static final RegistryObject<Block> LASER_CONTROLLER = registerBlock("laser_controller",
         ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                 .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
@@ -329,6 +390,8 @@ public static final RegistryObject<Block> LASER_CONTROLLER = registerBlock("lase
     public static final RegistryObject<Block> LASER_COOLANT_INPUT = registerBlock("laser_coolant_input",
             ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.STARCOGS);
+
+
 
 
 

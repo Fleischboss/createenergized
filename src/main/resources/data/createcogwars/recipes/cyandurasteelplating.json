@@ -1,0 +1,16 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "createcogwars:platings/durasteel"
+    },
+    {
+      "item": "minecraft:cyan_dye"
+    }
+  ],
+  "results": [
+    {
+      "item": "createcogwars:cyan_durasteel_plating"
+    }
+  ]
+}
