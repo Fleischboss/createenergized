@@ -1,0 +1,16 @@
+{
+  "type": "create:compacting",
+  "ingredients": [
+    {
+      "tag": "createenergized:platings/durasteel"
+    },
+    {
+      "item": "minecraft:dark_grey_dye"
+    }
+  ],
+  "results": [
+    {
+      "item": "createenergized:dark_grey_durasteel_plating"
+    }
+  ]
+}

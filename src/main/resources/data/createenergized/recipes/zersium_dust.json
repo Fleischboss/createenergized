@@ -1,0 +1,19 @@
+{
+  "type": "create:crushing",
+  "ingredients": [
+    {
+      "item": "createenergized:zersium_crystal"
+    }
+  ],
+  "results": [
+    {
+      "item": "createenergized:zersium_dust",
+      "count": 1
+    },
+    {
+      "item": "createenergized:zersium_dust",
+      "chance": 0.5
+    }
+  ],
+  "processingTime": 150
+}

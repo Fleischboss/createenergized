@@ -1,11 +1,6 @@
 {
   "replace": false,
   "values": [
-    "createenergized:durasteel_casing",
-    "createenergized:durasteel_block",
-    "createenergized:durasteel_plating",
-    "createenergized:zersium_block",
-    "createenergized:ceramisteel_bricks",
     "createenergized:black_durasteel_plating",
     "createenergized:blue_durasteel_plating",
     "createenergized:brown_durasteel_plating",

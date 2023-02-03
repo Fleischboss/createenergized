@@ -1,0 +1,67 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "tag": "forge:plates/gold"
+  },
+  "transitionalItem": {
+    "item": "create:golden_sheet"
+  },
+  "sequence": [
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create:golden_sheet"
+        },
+        {
+          "item": "createenergized:zersium_crystal"
+        }
+      ],
+      "results": [
+        {
+          "item": "create:golden_sheet"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create:golden_sheet"
+        },
+        {
+          "item": "create:electron_tube"
+        }
+      ],
+      "results": [
+        {
+          "item": "create:golden_sheet"
+        }
+      ]
+    },
+    {
+      "type": "create:deploying",
+      "ingredients": [
+        {
+          "item": "create:golden_sheet"
+        },
+        {
+          "item": "createenergized:lapis_sheet"
+        }
+      ],
+      "results": [
+        {
+          "item": "create:golden_sheet"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "item": "createenergized:integrated_circuit",
+      "chance": 100.0
+    }
+
+  ],
+  "loops": 5
+}

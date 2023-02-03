@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "createenergized:durasteel_block"
+    }
+  ],
+  "result": {
+    "item": "createenergized:durasteel_ingot",
+    "count": 9
+  }
+}

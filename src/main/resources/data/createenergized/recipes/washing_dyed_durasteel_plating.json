@@ -1,0 +1,13 @@
+{
+  "type": "create:splashing",
+  "ingredients": [
+    {
+      "tag": "createenergized:platings/dyed"
+    }
+  ],
+  "results": [
+    {
+      "item": "createenergized:durasteel_plating"
+    }
+  ]
+}
