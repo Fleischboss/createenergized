@@ -1,8 +1,16 @@
+buildscript {
+    dependencies {
+        classpath 'org.spongepowered:mixingradle:0.7.+'
+    }
+}
+
 plugins {
     id 'eclipse'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '5.1.+'
 }
+
+apply plugin: 'org.spongepowered.mixin'
 
 version = '0.0.2-1.19.2'
 group = 'net.fleischboss.createenergized' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
@@ -116,13 +124,12 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
+    maven {url "https://www.cursemaven.com"}
 
     maven {
         name = 'tterrag maven'
         url = 'https://maven.tterrag.com/'
     }
-
-
     // Put repositories for dependencies here
     // ForgeGradle automatically adds the Forge maven and Maven Central for you
 
@@ -137,6 +144,11 @@ dependencies {
     implementation fg.deobf("com.simibubi.create:create-${create_minecraft_version}:${create_version}:slim") { transitive = false }
     implementation fg.deobf("com.jozufozu.flywheel:flywheel-forge-${flywheel_minecraft_version}:${flywheel_version}")
     implementation fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
+
+    implementation fg.deobf("curse.maven:ad-astra-635042:4390112")
+    implementation fg.deobf("curse.maven:botarium-704113:4306551")
+    implementation fg.deobf("curse.maven:resourceful-config-714059:4331470")
+    implementation fg.deobf("curse.maven:resourceful-lib-570073:4378847")
 
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft', it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
@@ -155,6 +167,21 @@ dependencies {
     // For more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
+}
+
+mixin {
+    // Refmaps for each SourceSet
+    add sourceSets.main, 'createenergized.refmap.json'
+
+    // Configs to add to runs and jars
+    config 'createenergized.mixins.json'
+
+    // Specify options for dev run configs
+    debug.verbose = true
+    debug.export = true
+    dumpTargetOnFailure = true
+
+    // Options for the Annotation Processor
 }
 
 // Example for how to get properties into the manifest for reading at runtime.

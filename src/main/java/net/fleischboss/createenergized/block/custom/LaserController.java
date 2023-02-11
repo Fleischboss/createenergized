@@ -1,6 +1,5 @@
 package net.fleischboss.createenergized.block.custom;
 
-import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.HorizontalDirectionalBlock;
@@ -16,8 +15,9 @@ public class LaserController extends HorizontalDirectionalBlock {
     public LaserController(Properties properties) {
         super(properties);
     }
+
     @Override
-public BlockState getStateForPlacement(BlockPlaceContext pContext) {
+    public BlockState getStateForPlacement(BlockPlaceContext pContext) {
         return this.defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite());
     }
 
