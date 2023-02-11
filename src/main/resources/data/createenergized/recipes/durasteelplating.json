@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "createenergized:durasteel_sheet"
+    }
+  },
+  "result": {
+    "item": "createenergized:durasteel_plating"
+  }
+}

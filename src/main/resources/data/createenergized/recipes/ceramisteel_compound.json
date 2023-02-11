@@ -1,0 +1,49 @@
+{
+  "type": "create:sequenced_assembly",
+  "ingredient": {
+    "item": "createenergized:durasteel_compound"
+  },
+  "loops": 1,
+  "results": [
+    {
+      "item": "createenergized:ceramisteel_compound"
+    }
+  ],
+  "sequence": [
+    {
+      "type": "create:filling",
+      "ingredients": [
+        {
+          "item": "createenergized:durasteel_compound"
+        },
+        {
+          "fluid": "minecraft:lava",
+          "nbt": {},
+          "amount": 500
+        }
+      ],
+      "results": [
+        {
+          "item": "createenergized:incomplete_ceramisteel_compound"
+        }
+      ]
+    },
+
+    {
+      "type": "create:pressing",
+      "ingredients": [
+        {
+          "item": "createenergized:incomplete_ceramisteel_compound"
+        }
+      ],
+      "results": [
+        {
+          "item": "createenergized:incomplete_ceramisteel_compound"
+        }
+      ]
+    }
+  ],
+  "transitionalItem": {
+    "item": "createenergized:incomplete_ceramisteel_compound"
+  }
+}

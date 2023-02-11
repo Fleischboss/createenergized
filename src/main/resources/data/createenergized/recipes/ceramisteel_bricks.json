@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "createenergized:ceramisteel_compound"
+  },
+  "result": "createenergized:ceramisteel_bricks",
+  "experience": 0.1,
+  "cookingtime": 100
+}

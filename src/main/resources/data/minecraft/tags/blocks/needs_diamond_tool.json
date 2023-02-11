@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "createenergized:durasteel_casing",
+    "createenergized:durasteel_block",
+    "createenergized:durasteel_plating",
+    "createenergized:zersium_block",
+    "createenergized:ceramisteel_bricks",
+    "createenergized:black_durasteel_plating",
+    "createenergized:blue_durasteel_plating",
+    "createenergized:brown_durasteel_plating",
+    "createenergized:cyan_durasteel_plating",
+    "createenergized:dark_grey_durasteel_plating",
+    "createenergized:dark_green_durasteel_plating",
+    "createenergized:lime_durasteel_plating",
+    "createenergized:magenta_durasteel_plating",
+    "createenergized:pink_durasteel_plating",
+    "createenergized:red_durasteel_plating",
+    "createenergized:white_durasteel_plating",
+    "createenergized:yellow_durasteel_plating",
+    "createenergized:grey_durasteel_plating"
+  ]
+}

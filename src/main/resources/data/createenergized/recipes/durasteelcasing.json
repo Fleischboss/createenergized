@@ -1,0 +1,16 @@
+{
+  "type": "create:item_application",
+  "ingredients": [
+    {
+      "tag": "forge:stripped_logs"
+    },
+    {
+      "item": "createenergized:durasteel_ingot"
+    }
+  ],
+  "results": [
+    {
+      "item": "createenergized:durasteel_casing"
+    }
+  ]
+}

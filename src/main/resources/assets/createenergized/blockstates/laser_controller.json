@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "createenergized:block/laser_controller"
+    },
+    "facing=south": {
+      "model": "createenergized:block/laser_controller",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "createenergized:block/laser_controller",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "createenergized:block/laser_controller",
+      "y": 90
+    }
+  }
+}

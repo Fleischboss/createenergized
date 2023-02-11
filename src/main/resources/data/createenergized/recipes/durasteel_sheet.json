@@ -1,0 +1,13 @@
+{
+  "type": "create:pressing",
+  "ingredients": [
+    {
+      "item": "createenergized:durasteel_ingot"
+    }
+  ],
+  "results": [
+    {
+      "item": "createenergized:durasteel_sheet"
+    }
+  ]
+}
