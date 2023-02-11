@@ -1,7 +1,4 @@
 {
-  "required": true,
   "package": "net.fleischboss.createenergized.mixin",
-  "compatibilityLevel": "JAVA_17",
-  "mixins": [
-  ]
+  "compatibilityLevel": "JAVA_17"
 }
