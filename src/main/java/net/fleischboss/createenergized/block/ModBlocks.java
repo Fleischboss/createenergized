@@ -1,6 +1,9 @@
 package net.fleischboss.createenergized.block;
 
 
+import com.simibubi.create.AllSpriteShifts;
+import com.simibubi.create.content.contraptions.base.CasingBlock;
+import com.simibubi.create.foundation.data.BuilderTransformers;
 import net.fleischboss.createenergized.block.custom.LaserBarrel;
 import net.fleischboss.createenergized.block.custom.LaserController;
 import net.fleischboss.createenergized.createenergized;
@@ -33,7 +36,7 @@ public class ModBlocks {
             ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.ENERGIZED);
     public static final RegistryObject<Block> DURASTEEL_CASING = registerBlock("durasteel_casing",
-            ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+            ()  -> new CasingBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.ENERGIZED);
     public static final RegistryObject<Block> ZERSIUM_BLOCK = registerBlock("zersium_block",
             ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
