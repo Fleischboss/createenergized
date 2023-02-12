@@ -20,14 +20,14 @@ import net.minecraftforge.registries.ForgeRegistries;
 import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod(CreateEnergized.MOD_ID)
-public class CreateEnergized
+@Mod(createenergized.MOD_ID)
+public class createenergized
 {
     public static final String MOD_ID = "createenergized";
     private static final Logger LOGGER = LogUtils.getLogger();
     public static final NonNullSupplier<Registrate> REGISTRATE = NonNullSupplier.lazy(() -> Registrate.create(MOD_ID).creativeModeTab(() -> ModCreativeModeTab.ENERGIZED));
 
-    public CreateEnergized()
+    public createenergized()
     {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModConfiguredFeatures.register(modEventBus);

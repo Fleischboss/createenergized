@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "createenergized:block/laser_coolant_input"
+    },
+    "facing=south": {
+      "model": "createenergized:block/laser_coolant_input",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "createenergized:block/laser_coolant_input",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "createenergized:block/laser_coolant_input",
+      "y": 90
+    }
+  }
+}
