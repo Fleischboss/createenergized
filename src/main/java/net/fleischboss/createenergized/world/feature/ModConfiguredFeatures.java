@@ -13,14 +13,14 @@ import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvi
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.RegistryObject;
-import net.fleischboss.createenergized.createenergized;
+import net.fleischboss.createenergized.CreateEnergized;
 import net.fleischboss.createenergized.block.ModBlocks;
 
 import java.util.List;
 
 public class ModConfiguredFeatures {
     public static final DeferredRegister<ConfiguredFeature<?, ?>> CONFIGURED_FEATURES =
-            DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, createenergized.MOD_ID);
+            DeferredRegister.create(Registry.CONFIGURED_FEATURE_REGISTRY, CreateEnergized.MOD_ID);
 
     public static final RegistryObject<ConfiguredFeature<?, ?>> ZERSIUM_GEODE = CONFIGURED_FEATURES.register("zersium_geode",
             () -> new ConfiguredFeature<>(Feature.GEODE,

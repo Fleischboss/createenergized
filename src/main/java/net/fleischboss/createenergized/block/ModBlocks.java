@@ -1,12 +1,10 @@
 package net.fleischboss.createenergized.block;
 
 
-import com.simibubi.create.AllSpriteShifts;
 import com.simibubi.create.content.contraptions.base.CasingBlock;
-import com.simibubi.create.foundation.data.BuilderTransformers;
 import net.fleischboss.createenergized.block.custom.LaserBarrel;
 import net.fleischboss.createenergized.block.custom.LaserController;
-import net.fleischboss.createenergized.createenergized;
+import net.fleischboss.createenergized.CreateEnergized;
 import net.fleischboss.createenergized.block.custom.LaserCoolantInput;
 import net.fleischboss.createenergized.item.ModCreativeModeTab;
 import net.fleischboss.createenergized.item.ModItems;
@@ -29,7 +27,7 @@ import java.util.function.Supplier;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
-            DeferredRegister.create(ForgeRegistries.BLOCKS, createenergized.MOD_ID);
+            DeferredRegister.create(ForgeRegistries.BLOCKS, CreateEnergized.MOD_ID);
 
 
     public static final RegistryObject<Block> DURASTEEL_BLOCK = registerBlock("durasteel_block",
