@@ -16,7 +16,7 @@ public class LaserController extends HorizontalDirectionalBlock {
         super(properties);
     }
     @Override
-public BlockState getStateForPlacement(BlockPlaceContext pContext) {
+    public BlockState getStateForPlacement(BlockPlaceContext pContext) {
         return this.defaultBlockState().setValue(FACING, pContext.getHorizontalDirection().getOpposite());
     }
 
