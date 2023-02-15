@@ -1,7 +1,10 @@
 package net.fleischboss.createenergized.item;
 
 import net.fleischboss.createenergized.CreateEnergized;
+import net.fleischboss.createenergized.fluid.ModFluids;
+import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -36,6 +39,11 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ENERGIZED)));
     public static final RegistryObject<Item> INTEGRATED_CIRCUIT = ITEMS.register("integrated_circuit",
             () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ENERGIZED)));
+
+    public static final RegistryObject<Item> NITROGEN_BUCKET = ITEMS.register("nitrogen_bucket",
+            () -> new BucketItem(ModFluids.SOURCE_NITROGEN,
+                    new Item.Properties().tab(ModCreativeModeTab.ENERGIZED).craftRemainder(Items.BUCKET).stacksTo(1)));
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
