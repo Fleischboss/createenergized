@@ -23,7 +23,7 @@ public class ModFluids {
 
     public static final ForgeFlowingFluid.Properties NITROGEN_FLUID_PROPERTIES = new ForgeFlowingFluid.Properties(
             ModFluidTypes.NITROGEN_FLUID_TYPE, SOURCE_NITROGEN, FLOWING_NITROGEN)
-            .slopeFindDistance(2).levelDecreasePerBlock(2).block(ModBlocks.SOAP_WATER_BLOCK)
+            .slopeFindDistance(2).levelDecreasePerBlock(2).block(ModBlocks.NITROGEN_BLOCK)
             .bucket(ModItems.NITROGEN_BUCKET);
 
 
