@@ -9,12 +9,15 @@ import net.fleischboss.createenergized.block.custom.LaserController;
 import net.fleischboss.createenergized.CreateEnergized;
 import net.fleischboss.createenergized.block.custom.LaserCoolantInput;
 import net.fleischboss.createenergized.ct.SpriteShifts;
+import net.fleischboss.createenergized.fluid.ModFluids;
 import net.fleischboss.createenergized.item.ModCreativeModeTab;
 import net.fleischboss.createenergized.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -117,7 +120,7 @@ public class ModBlocks {
 
 
     //laser
-public static final RegistryObject<Block> LASER_CONTROLLER = registerBlock("laser_controller",
+    public static final RegistryObject<Block> LASER_CONTROLLER = registerBlock("laser_controller",
         ()  -> new LaserController(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                 .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.ENERGIZED);
 
@@ -129,28 +132,19 @@ public static final RegistryObject<Block> LASER_CONTROLLER = registerBlock("lase
             ()  -> new LaserCoolantInput(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(6f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.ENERGIZED);
 
-
-
-
-
+    public static final RegistryObject<LiquidBlock> NITROGEN_BLOCK = BLOCKS.register("nitrogen_block",
+            () -> new LiquidBlock(ModFluids.SOURCE_NITROGEN, BlockBehaviour.Properties.copy(Blocks.WATER)));
 
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
-    RegistryObject<T> toReturn = BLOCKS.register(name, block);
-    registerBlockItem(name, toReturn, tab);
-   return toReturn;
-}
+        RegistryObject<T> toReturn = BLOCKS.register(name, block);
+        registerBlockItem(name, toReturn, tab);
+        return toReturn;
+    }
 
-
-
-
-
-private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block,
-CreativeModeTab tab) {
-    return ModItems.ITEMS.register(name, ()-> new BlockItem(block.get(), new Item.Properties().tab(tab)));
-}
-
-
+    private static <T extends Block> RegistryObject<Item> registerBlockItem(String name, RegistryObject<T> block, CreativeModeTab tab) {
+        return ModItems.ITEMS.register(name, ()-> new BlockItem(block.get(), new Item.Properties().tab(tab)));
+    }
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

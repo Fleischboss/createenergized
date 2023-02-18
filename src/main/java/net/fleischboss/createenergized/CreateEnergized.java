@@ -6,6 +6,8 @@ import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import net.fleischboss.createenergized.block.ModBlocks;
 import net.fleischboss.createenergized.block.entity.BlockEntityRegistry;
 import net.fleischboss.createenergized.client.particle.LaserParticle;
+import net.fleischboss.createenergized.fluid.ModFluidTypes;
+import net.fleischboss.createenergized.fluid.ModFluids;
 import net.fleischboss.createenergized.item.ModCreativeModeTab;
 import net.fleischboss.createenergized.item.ModItems;
 import net.fleischboss.createenergized.particle.ParticleRegistry;
@@ -39,6 +41,8 @@ public class CreateEnergized
         ModPlacedFeatures.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        ModFluids.register(modEventBus);
+        ModFluidTypes.register(modEventBus);
         BlockEntityRegistry.register(modEventBus);
         ParticleRegistry.register(modEventBus);
 
