@@ -17,6 +17,9 @@ public class ModItems {
     public static final RegistryObject<Item> DEBUG_LASER_ITEM = ITEMS.register("debug_laser_item",
             () -> new DebugLaserItem(new Item.Properties().tab(ModCreativeModeTab.ENERGIZED)));
 
+    public static final RegistryObject<Item> BLASTER = ITEMS.register("blaster",
+            () -> new DebugLaserItem(new Item.Properties().tab(ModCreativeModeTab.ENERGIZED)));
+
     // Zersium
     public static final RegistryObject<Item> ZERSIUM_CRYSTAL = ITEMS.register("zersium_crystal",
         () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ENERGIZED)));
