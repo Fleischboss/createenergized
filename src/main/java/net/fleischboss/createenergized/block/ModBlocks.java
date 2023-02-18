@@ -1,20 +1,20 @@
 package net.fleischboss.createenergized.block;
 
-
 import com.simibubi.create.content.contraptions.base.CasingBlock;
+import com.simibubi.create.foundation.block.connected.SimpleCTBehaviour;
+import com.simibubi.create.foundation.data.CreateRegistrate;
+import com.tterrag.registrate.util.entry.RegistryEntry;
 import net.fleischboss.createenergized.block.custom.LaserBarrel;
 import net.fleischboss.createenergized.block.custom.LaserController;
 import net.fleischboss.createenergized.CreateEnergized;
 import net.fleischboss.createenergized.block.custom.LaserCoolantInput;
-import net.fleischboss.createenergized.fluid.ModFluids;
+import net.fleischboss.createenergized.ct.SpriteShifts;
 import net.fleischboss.createenergized.item.ModCreativeModeTab;
 import net.fleischboss.createenergized.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.LiquidBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -22,11 +22,9 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-import static com.simibubi.create.foundation.data.BlockStateGen.axisBlock;
-import static com.simibubi.create.foundation.data.ModelGen.customItemModel;
-
-
 import java.util.function.Supplier;
+
+import static net.fleischboss.createenergized.CreateEnergized.REGISTRATE;
 
 public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
@@ -36,9 +34,14 @@ public class ModBlocks {
     public static final RegistryObject<Block> DURASTEEL_BLOCK = registerBlock("durasteel_block",
             ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.ENERGIZED);
-    public static final RegistryObject<Block> DURASTEEL_CASING = registerBlock("durasteel_casing",
-            ()  -> new CasingBlock(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
-                    .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.ENERGIZED);
+
+    public static final RegistryEntry<CasingBlock> DURASTEEL_CASING = REGISTRATE.get().block("durasteel_casing", CasingBlock::new)
+            .initialProperties(Material.HEAVY_METAL)
+            .properties(p -> p.strength(6f).requiresCorrectToolForDrops())
+            .simpleItem()
+            .onRegister(CreateRegistrate.connectedTextures(() -> new SimpleCTBehaviour(SpriteShifts.DURASTEEL_CASING)))
+            .register();
+
     public static final RegistryObject<Block> ZERSIUM_BLOCK = registerBlock("zersium_block",
             ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.ENERGIZED);
@@ -126,8 +129,6 @@ public static final RegistryObject<Block> LASER_CONTROLLER = registerBlock("lase
             ()  -> new LaserCoolantInput(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(6f).requiresCorrectToolForDrops().noOcclusion()), ModCreativeModeTab.ENERGIZED);
 
-    public static final RegistryObject<LiquidBlock> NITROGEN_BLOCK = BLOCKS.register("nitrogen_block",
-            () -> new LiquidBlock(ModFluids.SOURCE_NITROGEN, BlockBehaviour.Properties.copy(Blocks.WATER)));
 
 
 

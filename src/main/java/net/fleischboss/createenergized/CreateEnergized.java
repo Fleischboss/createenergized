@@ -4,15 +4,16 @@ import com.mojang.logging.LogUtils;
 import com.tterrag.registrate.Registrate;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import net.fleischboss.createenergized.block.ModBlocks;
-import net.fleischboss.createenergized.fluid.ModFluidTypes;
-import net.fleischboss.createenergized.fluid.ModFluids;
+import net.fleischboss.createenergized.block.entity.BlockEntityRegistry;
+import net.fleischboss.createenergized.client.particle.LaserParticle;
 import net.fleischboss.createenergized.item.ModCreativeModeTab;
 import net.fleischboss.createenergized.item.ModItems;
+import net.fleischboss.createenergized.particle.ParticleRegistry;
 import net.fleischboss.createenergized.world.feature.ModConfiguredFeatures;
 import net.fleischboss.createenergized.world.feature.ModPlacedFeatures;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -38,8 +39,9 @@ public class CreateEnergized
         ModPlacedFeatures.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
-        ModFluids.register(modEventBus);
-        ModFluidTypes.register(modEventBus);
+        BlockEntityRegistry.register(modEventBus);
+        ParticleRegistry.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
@@ -55,14 +57,18 @@ public class CreateEnergized
     }
 
     // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents
     {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-            ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_NITROGEN.get(), RenderType.translucent());
-            ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_NITROGEN.get(), RenderType.translucent());
+
+        }
+
+        @SubscribeEvent
+        public static void registerParticleFactories(RegisterParticleProvidersEvent event) {
+            event.register(ParticleRegistry.LASER.get(), LaserParticle.Factory::new);
         }
     }
 }
