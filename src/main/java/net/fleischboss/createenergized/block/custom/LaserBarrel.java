@@ -42,7 +42,6 @@ public class LaserBarrel extends HorizontalDirectionalBlock {
         return pState.rotate(pMirror.getRotation(pState.getValue(FACING)));
     }
 
-
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(FACING);

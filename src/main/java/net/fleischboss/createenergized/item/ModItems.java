@@ -11,6 +11,9 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, CreateEnergized.MOD_ID);
 
+    public static final RegistryObject<Item> DEBUG_LASER_ITEM = ITEMS.register("debug_laser_item",
+            () -> new DebugLaserItem(new Item.Properties().tab(ModCreativeModeTab.ENERGIZED)));
+
     // Zersium
     public static final RegistryObject<Item> ZERSIUM_CRYSTAL = ITEMS.register("zersium_crystal",
         () -> new Item(new Item.Properties().tab(ModCreativeModeTab.ENERGIZED)));
