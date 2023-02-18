@@ -123,36 +123,55 @@
 			}
 		}
 	],
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-22, 90, 91],
+			"translation": [2, 0, 3.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-22, -89, -94],
+			"translation": [-2, 0, 3.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 90, 0],
+			"translation": [-0.25, 1.5, 2]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -90, 0],
+			"translation": [-0.25, 1.5, 2]
+		},
+		"gui": {
+			"rotation": [-16, 0, 33],
+			"translation": [-6.5, -0.5, 0],
+			"scale": [0.9, 0.9, 0.9]
+		},
+		"fixed": {
+			"rotation": [0, -1, 0],
+			"translation": [-7.25, 1.25, 0]
+		}
+	},
 	"groups": [
 		{
 			"name": "whole",
 			"origin": [8, 8, 8],
 			"color": 0,
-			"nbt": "{}",
-			"armAnimationEnabled": false,
 			"children": [
 				{
 					"name": "func",
 					"origin": [-4, 22, 0],
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [0, 1]
 				},
 				{
 					"name": "group",
 					"origin": [8, 8, 8],
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [2]
 				},
 				{
 					"name": "group",
 					"origin": [8, 8, 8],
 					"color": 0,
-					"nbt": "{}",
-					"armAnimationEnabled": false,
 					"children": [3, 4, 5]
 				},
 				6,
