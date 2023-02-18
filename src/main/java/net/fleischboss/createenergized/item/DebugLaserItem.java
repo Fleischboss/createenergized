@@ -21,7 +21,7 @@ public class DebugLaserItem extends Item {
         if (!level.isClientSide()) {
             ServerLevel serverLevel = (ServerLevel) level;
             for (ServerPlayer serverPlayer : serverLevel.players()) {
-                serverLevel.sendParticles(serverPlayer, new LaserParticleData(Direction.NORTH, 100, 0.5f), true, player.getX(), player.getY(), player.getZ(), 1, 0, 0, 0, 0);
+                serverLevel.sendParticles(serverPlayer, new LaserParticleData(Direction.NORTH, 100, 0.5f), true, player.getX(), player.getY(0.8), player.getZ(), 1, 0, 0, 0, 0);
             }
         }
         return super.use(level, player, hand);
