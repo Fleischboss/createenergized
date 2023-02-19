@@ -26,7 +26,7 @@ public class BlasterItem extends Item {
         if (!level.isClientSide()) {
             ServerLevel serverLevel = (ServerLevel) level;
             for (ServerPlayer serverPlayer : serverLevel.players()) {
-                serverLevel.sendParticles(serverPlayer, new LaserParticleData(Direction.NORTH, 20, 0.2f), true, player.getX(), player.getY(0.8), player.getZ(), 1, 0, 0, 0, 0);
+                serverLevel.sendParticles(serverPlayer, new LaserParticleData(Direction.NORTH, 20, 0.2f), true, player.getX(), player.getY(1), player.getZ(-2), 1, 0, 0, 0, 0);
 
 
             }
