@@ -1,5 +1,6 @@
 package net.fleischboss.createenergized.item;
 
+import net.fleischboss.createenergized.block.custom.LaserController;
 import net.fleischboss.createenergized.particle.LaserParticleData;
 import net.fleischboss.createenergized.sound.ModSounds;
 import net.minecraft.core.BlockPos;
