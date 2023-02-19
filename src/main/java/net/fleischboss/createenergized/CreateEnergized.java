@@ -11,6 +11,7 @@ import net.fleischboss.createenergized.fluid.ModFluids;
 import net.fleischboss.createenergized.item.ModCreativeModeTab;
 import net.fleischboss.createenergized.item.ModItems;
 import net.fleischboss.createenergized.particle.ParticleRegistry;
+import net.fleischboss.createenergized.sound.ModSounds;
 import net.fleischboss.createenergized.world.feature.ModConfiguredFeatures;
 import net.fleischboss.createenergized.world.feature.ModPlacedFeatures;
 import net.minecraft.world.level.block.Blocks;
@@ -45,6 +46,8 @@ public class CreateEnergized
         ModFluidTypes.register(modEventBus);
         BlockEntityRegistry.register(modEventBus);
         ParticleRegistry.register(modEventBus);
+        ModSounds.register(modEventBus);
+
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
