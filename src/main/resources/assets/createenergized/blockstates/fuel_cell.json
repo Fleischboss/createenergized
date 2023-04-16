@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "createenergized:block/fuel_cell"
+    },
+    "facing=south": {
+      "model": "createenergized:block/fuel_cell",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "createenergized:block/fuel_cell",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "createenergized:block/fuel_cell",
+      "y": 90
+    }
+  }
+}

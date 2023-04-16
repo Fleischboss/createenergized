@@ -4,6 +4,7 @@ import com.simibubi.create.content.contraptions.base.CasingBlock;
 import com.simibubi.create.foundation.block.connected.SimpleCTBehaviour;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.RegistryEntry;
+import net.fleischboss.createenergized.block.custom.FuelCell;
 import net.fleischboss.createenergized.block.custom.LaserBarrel;
 import net.fleischboss.createenergized.block.custom.LaserController;
 import net.fleischboss.createenergized.CreateEnergized;
@@ -117,7 +118,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> CYAN_DURASTEEL_PLATING = registerBlock("cyan_durasteel_plating",
             ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.ENERGIZED);
-
+//power gen
+public static final RegistryObject<Block> FUEL_CELL = registerBlock("fuel_cell",
+        ()  -> new FuelCell(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
+                .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.ENERGIZED);
 
     //laser
     public static final RegistryObject<Block> LASER_CONTROLLER = registerBlock("laser_controller",
