@@ -1,6 +1,7 @@
 package net.fleischboss.createenergized;
 
 import com.mojang.logging.LogUtils;
+import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.Registrate;
 import com.tterrag.registrate.util.nullness.NonNullSupplier;
 import net.fleischboss.createenergized.block.ModBlocks;
@@ -11,9 +12,13 @@ import net.fleischboss.createenergized.fluid.ModFluids;
 import net.fleischboss.createenergized.item.ModCreativeModeTab;
 import net.fleischboss.createenergized.item.ModItems;
 import net.fleischboss.createenergized.particle.ParticleRegistry;
+import net.fleischboss.createenergized.registrates.EnergizedBlock;
+import net.fleischboss.createenergized.registrates.EnergizedBlockEntity;
+import net.fleischboss.createenergized.registrates.EnergizedFluid;
 import net.fleischboss.createenergized.sound.ModSounds;
 import net.fleischboss.createenergized.world.feature.ModConfiguredFeatures;
 import net.fleischboss.createenergized.world.feature.ModPlacedFeatures;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
@@ -33,11 +38,16 @@ public class CreateEnergized
 {
     public static final String MOD_ID = "createenergized";
     private static final Logger LOGGER = LogUtils.getLogger();
-    public static final NonNullSupplier<Registrate> REGISTRATE = NonNullSupplier.lazy(() -> Registrate.create(MOD_ID).creativeModeTab(() -> ModCreativeModeTab.ENERGIZED));
+    public static final CreateRegistrate REGISTRATE = CreateRegistrate.create(MOD_ID).creativeModeTab(() -> ModCreativeModeTab.ENERGIZED);
 
     public CreateEnergized()
     {
+
+
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        MinecraftForge.EVENT_BUS.register(this);
+
+        
         ModConfiguredFeatures.register(modEventBus);
         ModPlacedFeatures.register(modEventBus);
         ModItems.register(modEventBus);
@@ -48,12 +58,15 @@ public class CreateEnergized
         ParticleRegistry.register(modEventBus);
         ModSounds.register(modEventBus);
 
+        EnergizedBlock.init();
+        EnergizedBlockEntity.init();
+        EnergizedFluid.init();
+        REGISTRATE.registerEventListeners(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
 
-        MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -78,4 +91,9 @@ public class CreateEnergized
             event.register(ParticleRegistry.LASER.get(), LaserParticle.Factory::new);
         }
     }
+
+    public static ResourceLocation asResource(String name) {
+        return new ResourceLocation(MOD_ID, name);
+    }
+
 }

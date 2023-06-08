@@ -1,6 +1,6 @@
 package net.fleischboss.createenergized.block;
 
-import com.simibubi.create.content.contraptions.base.CasingBlock;
+import com.simibubi.create.content.decoration.encasing.CasingBlock;
 import com.simibubi.create.foundation.block.connected.SimpleCTBehaviour;
 import com.simibubi.create.foundation.data.CreateRegistrate;
 import com.tterrag.registrate.util.entry.RegistryEntry;
@@ -39,7 +39,7 @@ public class ModBlocks {
             ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(6f).requiresCorrectToolForDrops()), ModCreativeModeTab.ENERGIZED);
 
-    public static final RegistryEntry<CasingBlock> DURASTEEL_CASING = REGISTRATE.get().block("durasteel_casing", CasingBlock::new)
+    public static final RegistryEntry<CasingBlock> DURASTEEL_CASING = REGISTRATE.block("durasteel_casing", CasingBlock::new)
             .initialProperties(Material.HEAVY_METAL)
             .properties(p -> p.strength(6f).requiresCorrectToolForDrops())
             .simpleItem()

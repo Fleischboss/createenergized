@@ -1,12 +1,11 @@
 package net.fleischboss.createenergized.rotational.components.lazers;
 
 import com.jozufozu.flywheel.core.virtual.VirtualRenderWorld;
-import com.simibubi.create.AllBlockPartials;
-import com.simibubi.create.content.contraptions.base.KineticTileEntity;
-import com.simibubi.create.content.contraptions.base.KineticTileEntityRenderer;
-import com.simibubi.create.content.contraptions.components.structureMovement.MovementContext;
-import com.simibubi.create.content.contraptions.components.structureMovement.render.ContraptionMatrices;
-import com.simibubi.create.content.contraptions.components.structureMovement.render.ContraptionRenderDispatcher;
+import com.simibubi.create.AllPartialModels;
+import com.simibubi.create.content.contraptions.behaviour.MovementContext;
+import com.simibubi.create.content.contraptions.render.ContraptionMatrices;
+import com.simibubi.create.content.contraptions.render.ContraptionRenderDispatcher;
+import com.simibubi.create.content.kinetics.base.KineticBlockEntityRenderer;
 import com.simibubi.create.foundation.render.CachedBufferer;
 import com.simibubi.create.foundation.render.SuperByteBuffer;
 import com.simibubi.create.foundation.utility.AngleHelper;
@@ -18,21 +17,21 @@ import net.minecraft.client.renderer.blockentity.BlockEntityRendererProvider;
 import net.minecraft.core.Direction;
 import net.minecraft.world.level.block.state.BlockState;
 
-public class EmitterRenderer extends KineticTileEntityRenderer {
+public class EmitterRenderer extends KineticBlockEntityRenderer<EmitterTileEntity> {
 
 	public EmitterRenderer(BlockEntityRendererProvider.Context context) {
 		super(context);
 	}
 
 	@Override
-	protected SuperByteBuffer getRotatedModel(KineticTileEntity te, BlockState state) {
-		return CachedBufferer.partialFacing(AllBlockPartials.DRILL_HEAD, state);
+	protected SuperByteBuffer getRotatedModel(EmitterTileEntity te, BlockState state) {
+		return CachedBufferer.partialFacing(AllPartialModels.DRILL_HEAD, state);
 	}
 
 	public static void renderInContraption(MovementContext context, VirtualRenderWorld renderWorld,
-		ContraptionMatrices matrices, MultiBufferSource buffer) {
+										   ContraptionMatrices matrices, MultiBufferSource buffer) {
 		BlockState state = context.state;
-		SuperByteBuffer superBuffer = CachedBufferer.partial(AllBlockPartials.DRILL_HEAD, state);
+		SuperByteBuffer superBuffer = CachedBufferer.partial(AllPartialModels.DRILL_HEAD, state);
 		Direction facing = state.getValue(EmitterBlock.FACING);
 
 		float speed = (float) (context.contraption.stalled

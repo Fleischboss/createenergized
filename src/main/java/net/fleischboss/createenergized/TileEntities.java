@@ -10,7 +10,7 @@ import static com.simibubi.create.Create.REGISTRATE;
 public class TileEntities {
 
     public static final BlockEntityEntry<EmitterTileEntity> EMITTER = REGISTRATE
-            .tileEntity("emitter", EmitterTileEntity::new)
+            .blockEntity("emitter", EmitterTileEntity::new)
             //.instance(() -> EmitterTileEntity::new, false)
             .validBlocks(AllCEBlocks.LAZER_EMITTER)
             .renderer(() -> EmitterRenderer::new)

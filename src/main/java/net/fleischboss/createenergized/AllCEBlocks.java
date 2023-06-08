@@ -1,8 +1,7 @@
 package net.fleischboss.createenergized;
 
-import com.simibubi.create.content.contraptions.components.actors.DrillBlock;
-import com.simibubi.create.content.contraptions.components.actors.DrillMovementBehaviour;
-import com.simibubi.create.foundation.block.BlockStressDefaults;
+
+import com.simibubi.create.content.kinetics.BlockStressDefaults;
 import com.simibubi.create.foundation.data.BlockStateGen;
 import com.simibubi.create.foundation.data.SharedProperties;
 import com.tterrag.registrate.util.entry.BlockEntry;

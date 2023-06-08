@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "createenergized:block/air_liquifier",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "createenergized:block/air_liquifier"
+    },
+    "facing=south": {
+      "model": "createenergized:block/air_liquifier",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "createenergized:block/air_liquifier",
+      "y": 270
+    }
+  }
+}

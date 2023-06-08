@@ -1,9 +1,8 @@
 package net.fleischboss.createenergized.rotational.components.lazers;
 
 import com.simibubi.create.AllShapes;
-import com.simibubi.create.AllTileEntities;
-import com.simibubi.create.content.contraptions.base.DirectionalKineticBlock;
-import com.simibubi.create.foundation.block.ITE;
+import com.simibubi.create.content.kinetics.base.DirectionalKineticBlock;
+import com.simibubi.create.foundation.block.IBE;
 import net.fleischboss.createenergized.TileEntities;
 import net.minecraft.MethodsReturnNonnullByDefault;
 import net.minecraft.core.BlockPos;
@@ -36,7 +35,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 @ParametersAreNonnullByDefault
 @MethodsReturnNonnullByDefault
-public class EmitterBlock extends DirectionalKineticBlock implements ITE<EmitterTileEntity>, SimpleWaterloggedBlock {
+public class EmitterBlock extends DirectionalKineticBlock implements IBE<EmitterTileEntity>, SimpleWaterloggedBlock {
 	public static DamageSource damageSourceDrill = new DamageSource("create.mechanical_drill").bypassArmor();
 
 	public EmitterBlock(Properties properties) {
@@ -51,7 +50,7 @@ public class EmitterBlock extends DirectionalKineticBlock implements ITE<Emitter
 		if (!new AABB(pos).deflate(.1f)
 			.intersects(entityIn.getBoundingBox()))
 			return;
-		withTileEntityDo(worldIn, pos, te -> {
+		withBlockEntityDo(worldIn, pos, te -> {
 			if (te.getSpeed() == 0)
 				return;
 			entityIn.hurt(damageSourceDrill, (float) getDamage(te.getSpeed()));
@@ -66,7 +65,7 @@ public class EmitterBlock extends DirectionalKineticBlock implements ITE<Emitter
 	@Override
 	public void neighborChanged(BlockState state, Level worldIn, BlockPos pos, Block blockIn, BlockPos fromPos,
 		boolean isMoving) {
-		withTileEntityDo(worldIn, pos, EmitterTileEntity::destroyNextTick);
+		withBlockEntityDo(worldIn, pos, EmitterTileEntity::destroyNextTick);
 	}
 
 	@Override
@@ -125,12 +124,12 @@ public class EmitterBlock extends DirectionalKineticBlock implements ITE<Emitter
 	}
 
 	@Override
-	public Class<EmitterTileEntity> getTileEntityClass() {
+	public Class<EmitterTileEntity> getBlockEntityClass() {
 		return EmitterTileEntity.class;
 	}
 
 	@Override
-	public BlockEntityType<? extends EmitterTileEntity> getTileEntityType() {
+	public BlockEntityType<? extends EmitterTileEntity> getBlockEntityType() {
 		return TileEntities.EMITTER.get();
 	}
 }

@@ -1,0 +1,13 @@
+// 1.19.2	2023-06-08T00:44:49.2813177	Registrate Provider for createenergized [Recipes, Advancements, Loot tables, Tags (blocks), Tags (items), Tags (fluids), Tags (entity_types), Blockstates, Item models, Lang (en_us/en_ud)]
+74a8d80a73a8fd2f37bfd662bb81fb385776e17c assets/createenergized/blockstates/air_liquifier.json
+f986cf3d7e55095a0b5ee373de094ae6ded26881 assets/createenergized/blockstates/durasteel_casing.json
+ad562ae2a364be0ce4e147f5549253974cc41bfe assets/createenergized/blockstates/liquid_air.json
+c1526029410f32119f0f819ebf179ce042e4741b assets/createenergized/lang/en_ud.json
+d1ba4fe2c5480372f66974413f82f4873906e296 assets/createenergized/lang/en_us.json
+bf2ae82f23130b78c7d0928afbe415a9e1235871 assets/createenergized/models/block/durasteel_casing.json
+100990f40e3f670d2af49329e58f10ed64027909 assets/createenergized/models/block/liquid_air.json
+410ae6f28731855110954d95c945639a4eaf7a80 assets/createenergized/models/item/air_liquifier.json
+3127975d6c7085cfbf6f59e5acbbe3131891e728 assets/createenergized/models/item/durasteel_casing.json
+0f29fe9efeddc154223b7942025b3c3b80b386bf assets/createenergized/models/item/liquid_air_bucket.json
+6f45b80332b431be8811e8b59613041775ce598d data/createenergized/loot_tables/blocks/air_liquifier.json
+61bb2fed338ebe33bf10d5e03c420433db77a7e9 data/createenergized/loot_tables/blocks/durasteel_casing.json
