@@ -1,6 +1,0 @@
-{
-  "parent": "block/cube_all",
-  "textures": {
-    "all": "createenergized:block/durasteel_plating_dark_grey"
-  }
-}

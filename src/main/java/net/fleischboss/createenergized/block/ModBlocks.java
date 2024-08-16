@@ -63,11 +63,11 @@ public class ModBlocks {
             ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.ENERGIZED);
 
-    public static final RegistryObject<Block> DARK_GRAY_DURASTEEL_PLATING = registerBlock("dark_grey_durasteel_plating",
+    public static final RegistryObject<Block> DARK_GRAY_DURASTEEL_PLATING = registerBlock("dark_gray_durasteel_plating",
             ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.ENERGIZED);
 
-    public static final RegistryObject<Block> GREY_DURASTEEL_PLATING = registerBlock("grey_durasteel_plating",
+    public static final RegistryObject<Block> GRAY_DURASTEEL_PLATING = registerBlock("gray_durasteel_plating",
             ()  -> new Block(BlockBehaviour.Properties.of(Material.HEAVY_METAL)
                     .strength(15f).explosionResistance(100f).requiresCorrectToolForDrops()), ModCreativeModeTab.ENERGIZED);
 
